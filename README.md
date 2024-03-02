@@ -67,13 +67,13 @@ website, visitors can contact us via email or contact number, write a review abo
 
 ## Screenshots
 1.Home Page
-![image](https://github.com/shaunak-ss/Voting-Block/assets/69027908/5bfca7d5-0db2-4352-9699-7403d2dd38d9)
+![image](https://github.com/shaunak-ss/Voting-Block/assets/69027908/01fe6bfe-6ac5-438a-b89f-3c7cdc5bc59e)
 
 2.Signup Page
-![image](https://github.com/shaunak-ss/Voting-Block/assets/69027908/85784fc4-a137-4258-b43e-ad71e5d7583b)
+![image](https://github.com/shaunak-ss/Voting-Block/assets/69027908/941c13c8-78a0-44f2-8f77-745db01fc0ef)
 
 3.User Profile Page
-![image](https://github.com/shaunak-ss/Voting-Block/assets/69027908/0f687dcd-fc03-48b0-a414-b6cc0ef07982)
+![image](https://github.com/shaunak-ss/Voting-Block/assets/69027908/165c118d-3883-4ccf-8ca7-bb147bbb1dd1)
 
 4.Voting Page
-![image](https://github.com/shaunak-ss/Voting-Block/assets/69027908/ecd7692b-a86c-4faf-9eee-3b963ba649d2)
+![image](https://github.com/shaunak-ss/Voting-Block/assets/69027908/63effef6-2e47-4e0e-87c9-bccf56f13e9d)
