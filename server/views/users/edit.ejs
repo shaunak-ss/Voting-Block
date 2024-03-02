@@ -1,0 +1,109 @@
+<% include('../layouts/header.ejs') %>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    
+
+</head>
+
+<nav class="navbar navbar-expand-lg " style="background-color: black;">
+    <a class="navbar-brand" href="/">
+        <img src="images/eci2.png" width="150px" height="30px" loading="lazy" style="background-color: white;" />
+      </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/home" style="color:white;" onMouseOver="this.style.color='red'"
+                    onMouseOut="this.style.color='white'">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:3000/vote.html" style="color:white;" onMouseOver="this.style.color='red'"
+                    onMouseOut="this.style.color='white'">Cast Vote</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/logout" style="color:white;"
+                    onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Logout</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+<div style="background: url('images/backi2.png'); height: 100vh; background-repeat: no-repeat;background-size: cover;">
+    <br>
+<h1 style="margin-left: 41%;
+margin-top: 4%;">Welcome, <%= user.name %></h1>
+<% if(user.request_count >=3){
+    %><p style="color: rgb(3, 75, 3);
+    margin-left: 39%;
+    font-size: 30px;">
+    "Maximum Requests used"
+</p><% } 
+
+ if(user.is_update == 1){
+    if(usernew.sentrequest == 1){ 
+    %>
+    <p style="color: rgb(3, 75, 3);
+        margin-left: 39%;
+        font-size: 30px;">
+        "Request is sent to Admin"
+    </p>
+    <% }
+    } 
+%>
+
+    
+    
+<form action="" method="post" enctype="application/x-www-form-urlencoded" style="
+width: 32%;
+    height: 52%;
+    border: 7px solid black;
+    display: inline-block;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 20px;
+    margin-left: 34%;
+    margin-top: 35px;
+    font-size: 20px;
+    ">
+    <label>Name : </label>
+    <input type="text" name="name" placeholder="Enter Name" value="<%= user.name %>" style="float: right;">
+    <br><br>
+    <label>E-mail : </label>
+    <input type="email" name="email" placeholder="Enter Email" value="<%= user.email %>" style="float: right;">
+    <br><br>
+    <label>Mobile : </label>
+    <input type="text" name="mno" placeholder="Enter Mobile" value="<%= user.mobile %>" style="float: right;">
+    <br><br>
+    <label>Aadhar : </label>
+    <input type="text" name="adhar" placeholder="Enter Aadhar Number" value="<%= user.adhar %>" style="float: right;" disabled>
+    <br><br>
+    
+    <input type="hidden" id="btn" name="id" value="<%= user._id %>" >
+    <button id="imp" style="margin-left: 32%;
+    margin-top: 3%;
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 18px;" type="submit" value="Update Request" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'" <% if(user.is_update == 1){ if(usernew.sentrequest == 1){ %> disabled <% } } %> <% if(user.request_count >=3){ %> disabled <% } %>>
+    Update Request
+    </button>
+    
+</form>
+
+</div>
+
+<% include('../layouts/footer.ejs') %>

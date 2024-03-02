@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  
+  color: white;
+}
+
+p{
+    font-size: 20px;
+}
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg " style="background-color: black;">
+        <a class="navbar-brand" href="/">
+            <img src="images/eci2.png" width="150px" height="30px" loading="lazy" style="background-color: white;" />
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/dashboard" style="color:white;"
+                        onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:3000/adminvote.html" style="color:white;"
+                        onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Election</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/updaterequest" style="color:white;"
+                        onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Update Requests</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/review-page" style="color:white;"
+                        onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/logout" style="color:white;"
+                        onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Logout</a>
+                </li>
+    
+            </ul>
+        </div>
+    </nav>
+    <div style="background: url('images/backi2.png'); height: 100vh; background-repeat: no-repeat;background-size: cover;">
+    <br>
+    <h1 style="margin-left: 698px;
+    margin-top: 35px;
+    margin-bottom: 30px;">Welcome, <%= admin.name %></h1>
+    <h2 style="text-align: center;
+    background-color: black;
+    color: white;
+    width: 280px;
+    margin-left: 715px">Admin Profile Card</h2>
+
+    <div class="card">
+      <img src="images/logouser.jpg" alt="John" style="width:100%">
+      <p>Name : <%= admin.name %> </p>
+      <p class="title">E-mail : <%= admin.email %></p>
+      <p>Aadhar No : <%= admin.adhar %></p>
+      <div style="margin: 24px 0;">
+        
+      </div>
+      <p><button></button></p>
+    </div>
+    </div>
+</body>
+</html>

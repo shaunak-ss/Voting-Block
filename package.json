@@ -1,0 +1,21 @@
+{
+  "name": "blockvote",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "lite-server": "^2.5.4",
+    "local-storage": "^2.0.0"
+  }
+}

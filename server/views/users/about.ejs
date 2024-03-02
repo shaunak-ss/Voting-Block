@@ -1,0 +1,165 @@
+<% include('../layouts/header.ejs') %>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="../../css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+        <header>
+            <div id="navbar-custom"></div>
+        </header>
+        <style>
+            .profilec {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 30px;
+            }
+
+            .profileca {
+                flex: 1 1 30%;
+                max-width: 300px;
+                background: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 5%;
+            }
+
+            .profileic {
+                height: 300px;
+                width: 200px;
+                object-fit: cover;
+
+            }
+
+            .profilena {
+                font-size: 24px;
+                font-weight: bold;
+                margin: 25px 0 10px 0;
+            }
+
+            .profilepo {
+                font-size: 15px;
+                color: #777;
+            }
+        </style>
+    </head>
+    <nav class="navbar navbar-expand-lg " style="background-color: black;">
+        <a class="navbar-brand" href="/">
+            <img src="images/eci2.png" width="150px" height="30px" loading="lazy" style="background-color: white;" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:3000/" style="color:white;"
+                        onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Home <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:3000/how-it-works.html" style="color:white;"
+                        onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">How it Works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:3002/register" style="color:white;"
+                        onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Create Acount</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:3002/login" style="color:white;"
+                        onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Login User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:3002/admin/" style="color:white;"
+                        onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Login Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:3002/about" style="color:white;"
+                        onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">About Us</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div
+        style="background: url('images/back1.avif'); height: 100vh; background-repeat: no-repeat;background-size: cover;">
+        <div>
+            <div style="display: inline-block; width: 50%;">
+                <h1 style="margin-left: 34%; margin-top: 5%;">About Us</h1>
+                <p style="margin: 5%;">We are final year computer science students who are pursuing B.tech degree and we built this project as a Final year project. The reason for choosing this technology for the project is because,Bloackchain is gaining so much popularity in the Tech industry and we wanted to gain in depth knowledge about this technology. So if you want to contact us we are mentioning our contact details below. Also you can write review about your experience or suggest some improvements about the website.
+                </p>
+                <div class="profilec">
+                    <div class="profileca">
+                        <img src="images/prof2.jpg" alt="image1" class="profileic" />
+                        <div class="profilena">Shaunak Shukla</div>
+                        <div class="profilepo">VIT,Vellore</div>
+                        <div class="profilepo" style="margin-bottom: 3%;">shaunakshukla12@gmail.com</div>
+
+                    </div>
+                    <div class="profileca">
+                        <img src="images/prof3.jpg" alt="image2" class="profileic" />
+                        <div class="profilena">Pratyaksh Jain</div>
+                        <div class="profilepo">VIT,Vellore</div>
+                        <div class="profilepo" style="margin-bottom: 3%;">pratyaksh.272@gmail.com</div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div style="display: inline-block; width: 50%; float: right;">
+                <h1 style="margin-left: 40%; margin-top: 5%;">Feedback</h1>
+                <% if(typeof message !=='undefined' ){ %>
+                    <p style="color: green;
+                        margin-left: 37%;
+                        font-size: 30px;
+                        margin-bottom: -2%;">
+                        <%= message %>
+                    </p>
+                    <% } %>
+
+                <form action="" method="post" enctype="application/x-www-form-urlencoded" style="
+        width: 69%;
+    height: 67%;
+    border: 7px solid black;
+    display: inline-block;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 20px;
+    margin-left: 16%;
+    margin-top: 35px;
+    font-size: 20px;">
+                    <label> Name :</label>
+                    <input type="text" name="name" placeholder="Enter Name" style="float: right;">
+                    <br><br>
+                    <label> Email :</label>
+                    <input type="email" name="email" placeholder="Enter Email" style="float: right;">
+                    <br><br>
+                    <label> Mobile :</label>
+                    <input type="text" name="mno" placeholder="Enter Mobile" style="float: right;">
+                    <br><br>
+                    <label>Review / Suggestions:</label>
+                    <textarea rows="4" cols="53" name="comment"></textarea>
+                    <br><br>
+                    <input style="    margin-left: 34%;
+        margin-top: 2%;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        width: 29%;
+        height: 12%;
+        font-size: 19px;
+        padding: 0%;" type="submit" value="Submit" onMouseOver="this.style.color='red'"
+                        onMouseOut="this.style.color='white'">
+                </form>
+            
+            </div>
+        </div>
+    </div>
+    <% include('../layouts/footer.ejs') %>

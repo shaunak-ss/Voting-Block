@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 65%;
+          margin-left: 20%;
+          margin-top: 2%;
+          font-size: 18px;
+        }
+        
+        th, td {
+          padding: 8px;
+          text-align: left;
+          border-bottom: 1px solid #DDD;
+        }
+        
+        
+        tr:hover {background-color: #D6EEEE;}
+
+        button{
+            width: 150px;
+            height: 50px;
+            
+            background-color: black;
+            border-radius: 10px;
+            margin-left: 20%;
+            margin-top: 4%;
+            font-size: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: white; 
+        }
+        .btn{
+            width: 115px;
+            height: 40px;
+            background-color: black;
+            border-radius: 10px;
+            margin-left: 8%;
+            margin-top: 2%;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg " style="background-color: black;">
+        <a class="navbar-brand" href="/">
+            <img src="images/eci2.png" width="150px" height="30px" loading="lazy" style="background-color: white;" />
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/home" style="color:white;"
+                        onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/updaterequest" style="color:white;"
+                        onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Update Requests</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/logout" style="color:white;"
+                        onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Logout</a>
+                </li>
+    
+            </ul>
+        </div>
+    </nav>
+    <div style="background: url('images/backi2.png'); height: 100vh; background-repeat: no-repeat;background-size: cover;">
+        <br>
+    
+    <div>
+        <table>
+            <thead>
+            <tr style="background-color: black; color: white;">
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile No</th>
+                <th>Review</th>
+            </tr>
+            </thead>
+            <%
+                if(users.length > 0){
+                    for(let i=0;i<users.length;i++){
+                        %>
+                        <tr>
+                            <td><%= users[i].name %></td>
+                            <td><%= users[i].email %></td>
+                            <td><%= users[i].mobile %></td>
+                            <td><%= users[i].rev %></td>
+                            
+                            
+                        </tr>
+                        <%
+                    }
+                }
+                else{
+                    %>
+                        <tr>
+                            <td>Users Not Found</td>                            
+                        </tr>
+                    <%
+                }
+            %>
+        </table>
+    </div>
+    </div>
+</body>
+</html>
